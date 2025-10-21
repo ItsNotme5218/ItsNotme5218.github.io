@@ -1,12 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-R-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Website</title>
+    <title>Welcome to My Website</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* A very light gray background */
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #4f46e5, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to my first GitHub Page.</p>
+<body class="text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-indigo-600">
+                BrandLogo
+            </a>
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-indigo-600 transition-colors">About</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">Services</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">Contact</a>
+            </div>
+            <!-- CTA Button -->
+            <a href="#" class="hidden md:block bg-indigo-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-transform hover:scale-105">
+                Get Started
+            </a>
+            <!-- Mobile Menu Button (placeholder) -->
+            <div class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                    Build Your <span class="gradient-text">Amazing Idea</span> Online
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                    This is a clean, modern, and fully responsive template to kickstart your next project. Built with love and Tailwind CSS.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-transform hover:scale-105 shadow-lg">
+                        Learn More
+                    </a>
+                    <a href="#" class="bg-white text-gray-800 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-transform hover:scale-105 shadow-lg border">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="bg-white py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Why Choose Us?</h2>
+                    <p class="text-gray-600 mt-2">Everything you need to succeed.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md text-center hover:shadow-xl transition-shadow">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2">Blazing Fast</h3>
+                        <p class="text-gray-600">Our services are optimized for speed and performance, ensuring a great user experience.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md text-center hover:shadow-xl transition-shadow">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2">Fully Secure</h3>
+                        <p class="text-gray-600">We prioritize security with end-to-end encryption and robust data protection.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md text-center hover:shadow-xl transition-shadow">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10h.01M15 10h.01M9 14h6" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2">24/7 Support</h3>
+                        <p class="text-gray-600">Our dedicated support team is here to help you around the clock, anytime you need us.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action Section -->
+        <section class="bg-indigo-600 text-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">
+                    Join thousands of happy customers today. It only takes a minute to sign up.
+                </p>
+                <a href="#" class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-transform hover:scale-105 shadow-lg">
+                    Create Your Account
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Your Brand. All Rights Reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">Designed with passion.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
