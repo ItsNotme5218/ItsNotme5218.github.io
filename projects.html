@@ -67,7 +67,8 @@
     <div class="gradient-blob" style="background-color: #60a5fa; top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: -10s;"></div>
 
     <!-- Main Content Island -->
-    <div class="frosted-glass-island w-full max-w-7xl mx-auto rounded-3xl overflow-hidden"> <!-- max-w-7xl to fit 3 columns -->
+    <!-- I made this one 'max-w-6xl' to give your list layout more room -->
+    <div class="frosted-glass-island w-full max-w-6xl mx-auto rounded-3xl overflow-hidden">
         
         <!-- Header / Navigation -->
         <header class="border-b border-white/20">
@@ -94,79 +95,124 @@
                     <p class="text-lg text-gray-700 mt-2">A collection of my recent work.</p>
                 </div>
                 
-                <!-- Projects Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Projects List -->
+                <div class="flex flex-col space-y-8 md:space-y-12">
                     
                     <!-- Project 1 -->
-                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
-                        <div class="video-container rounded-lg overflow-hidden mb-3">
-                            <iframe src="https://drive.google.com/file/d/1xNt3TUiq4osnEoXrXsnpoAV5z-Gdz9-7/preview" frameborder="0" allowfullscreen="true"></iframe>
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30 flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/2">
+                            <div class="video-container rounded-lg overflow-hidden">
+                                <iframe src="https://drive.google.com/file/d/1xNt3TUiq4osnEoXrXsnpoAV5z-Gdz9-7/preview" frameborder="0" allowfullscreen="true"></iframe>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800">Project One</h3>
+                        <div class="w-full md:w-1/2 p-4 md:pl-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Project One</h3>
+                            <p class="text-gray-700">This project was an exploration of... (You can write your description here). I focused on building a clean interface and ensuring the video content was the main focus.</p>
+                        </div>
                     </div>
 
                     <!-- Project 2 -->
-                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
-                        <div class="video-container rounded-lg overflow-hidden mb-3">
-                            <iframe src="https://drive.google.com/file/d/16Gw0XuN-o89Le73lN7lKhlN_FJlHbGJZ/preview" frameborder="0" allowfullscreen="true"></iframe>
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30 flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/2">
+                            <div class="video-container rounded-lg overflow-hidden">
+                                <iframe src="https://drive.google.com/file/d/16Gw0XuN-o89Le73lN7lKhlN_FJlHbGJZ/preview" frameborder="0" allowfullscreen="true"></iframe>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800">Project Two</h3>
+                        <div class="w-full md:w-1/2 p-4 md:pl-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Project Two</h3>
+                            <p class="text-gray-700">For this piece, I experimented with... (Write your description here). The challenge was to integrate different media types into a cohesive narrative.</p>
+                        </div>
                     </div>
 
                     <!-- Project 3 -->
-                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
-                        <div class="video-container rounded-lg overflow-hidden mb-3">
-                            <iframe src="https://drive.google.com/file/d/1YN_n2Lu4OoVx6JUIfbkpOJXIHhUojwth/preview" frameborder="0" allowfullscreen="true"></iframe>
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30 flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/2">
+                            <div class="video-container rounded-lg overflow-hidden">
+                                <iframe src="https://drive.google.com/file/d/1YN_n2Lu4OoVx6JUIfbkpOJXIHhUojwth/preview" frameborder="0" allowfullscreen="true"></iframe>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800">Project Three</h3>
+                        <div class="w-full md:w-1/2 p-4 md:pl-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Project Three</h3>
+                            <p class="text-gray-700">A deep dive into... (Write your description here). This project taught me the importance of planning and storyboarding before production.</p>
+                        </div>
                     </div>
 
                     <!-- Project 4 -->
-                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
-                        <div class="video-container rounded-lg overflow-hidden mb-3">
-                            <iframe src="https://drive.google.com/file/d/1JhTeYKGEiSv9Lme0Ma0I1WViEad5N1K-/preview" frameborder="0" allowfullscreen="true"></iframe>
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30 flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/2">
+                            <div class="video-container rounded-lg overflow-hidden">
+                                <iframe src="https://drive.google.com/file/d/1JhTeYKGEiSv9Lme0Ma0I1WViEad5N1K-/preview" frameborder="0" allowfullscreen="true"></iframe>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800">Project Four</h3>
+                        <div class="w-full md:w-1/2 p-4 md:pl-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Project Four</h3>
+                            <p class="text-gray-700">This was a collaborative effort to... (Write your description here). My role was to handle the post-production and color grading.</p>
+                        </div>
                     </div>
-
+                    
                     <!-- Project 5 -->
-                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
-                        <div class="video-container rounded-lg overflow-hidden mb-3">
-                            <iframe src="https://drive.google.com/file/d/1P7mZIXIV8aaSbjTNg96FS1awGJSHHAKt/preview" frameborder="0" allowfullscreen="true"></iframe>
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30 flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/2">
+                            <div class="video-container rounded-lg overflow-hidden">
+                                <iframe src="https://drive.google.com/file/d/1P7mZIXIV8aaSbjTNg96FS1awGJSHHAKt/preview" frameborder="0" allowfullscreen="true"></iframe>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800">Project Five</h3>
+                        <div class="w-full md:w-1/2 p-4 md:pl-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Project Five</h3>
+                            <p class="text-gray-700">An analysis of... (Write your description here). I used data visualization techniques to make the information clear and engaging.</p>
+                        </div>
                     </div>
 
                     <!-- Project 6 -->
-                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
-                        <div class="video-container rounded-lg overflow-hidden mb-3">
-                            <iframe src="https://drive.google.com/file/d/1S7Wzcnh8zqxjI8rsczZWFshyD_qVYoUa/preview" frameborder="0" allowfullscreen="true"></iframe>
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30 flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/2">
+                            <div class="video-container rounded-lg overflow-hidden">
+                                <iframe src="https://drive.google.com/file/d/1S7Wzcnh8zqxjI8rsczZWFshyD_qVYoUa/preview" frameborder="0" allowfullscreen="true"></iframe>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800">Project Six</h3>
+                        <div class="w-full md:w-1/2 p-4 md:pl-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Project Six</h3>
+                            <p class="text-gray-700">This was a quick study on... (Write your description here). It was a great exercise in rapid prototyping and iterative design.</p>
+                        </div>
                     </div>
-
+                    
                     <!-- Project 7 -->
-                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
-                        <div class="video-container rounded-lg overflow-hidden mb-3">
-                            <iframe src="https://drive.google.com/file/d/1KBg3i5M5mSlWS7sfTzsgdKmAp5LRxNEu/preview" frameborder="0" allowfullscreen="true"></iframe>
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30 flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/2">
+                            <div class="video-container rounded-lg overflow-hidden">
+                                <iframe src="https://drive.google.com/file/d/1KBg3i5M5mSlWS7sfTzsgdKmAp5LRxNEu/preview" frameborder="0" allowfullscreen="true"></iframe>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800">Project Seven</h3>
+                        <div class="w-full md:w-1/2 p-4 md:pl-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Project Seven</h3>
+                            <p class="text-gray-700">A personal favorite, this project allowed me to... (Write your description here). I was responsible for both the concept and execution.</p>
+                        </div>
                     </div>
 
                     <!-- Project 8 -->
-                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
-                        <div class="video-container rounded-lg overflow-hidden mb-3">
-                            <iframe src="https://drive.google.com/file/d/1Yp5tOX2juWMJh_13FNIcV2UkibLBe4Q6/preview" frameborder="0" allowfullscreen="true"></iframe>
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30 flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/2">
+                            <div class="video-container rounded-lg overflow-hidden">
+                                <iframe src="https://drive.google.com/file/d/1Yp5tOX2juWMJh_13FNIcV2UkibLBe4Q6/preview" frameborder="0" allowfullscreen="true"></iframe>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800">Project Eight</h3>
+                        <div class="w-full md:w-1/2 p-4 md:pl-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Project Eight</h3>
+                            <p class="text-gray-700">This project focused on... (Write your description here). It was featured in... (mention any achievements).</p>
+                        </div>
                     </div>
 
                     <!-- Project 9 -->
-                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
-                        <div class="video-container rounded-lg overflow-hidden mb-3">
-                            <iframe src="https://drive.google.com/file/d/1INKgM0YYsh3pkVscIq7k1PeU8FQuN5ve/preview" frameborder="0" allowfullscreen="true"></iframe>
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30 flex flex-col md:flex-row">
+                        <div class="w-full md:w-1/2">
+                            <div class="video-container rounded-lg overflow-hidden">
+                                <iframe src="https://drive.google.com/file/d/1INKgM0YYsh3pkVscIq7k1PeU8FQuN5ve/preview" frameborder="0" allowfullscreen="true"></iframe>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800">Project Nine</h3>
+                        <div class="w-full md:w-1/2 p-4 md:pl-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Project Nine</h3>
+                            <p class="text-gray-700">The goal here was to... (Write your description here). This project demonstrates my skills in... (mention specific skills).</p>
+                        </div>
                     </div>
 
                 </div>
@@ -175,9 +221,10 @@
         
         <!-- Footer -->
         <footer class="bg-black/5 text-gray-700 py-6 px-6 md:px-10 text-center">
-             <p>&copy; 2025 Ben &bull; <a href="mailto:hello@example.com" class="hover:text-indigo-600">hello@example.com</a></p>
+             <p>&copy; 2025 Ben &bull; <a href="benbach5218@gmail.com" class="hover:text-indigo-600">benbach5218@gmail.com</a></p>
         </footer>
     </div>
 
 </body>
 </html>
+
