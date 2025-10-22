@@ -3,18 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>About Ben</title>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles (Same as other pages) -->
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            overflow-x: hidden;
+            padding: 2rem 1rem;
+        }
+        .frosted-glass-island {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        }
+        .gradient-blob {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(150px);
+            z-index: -1;
+            opacity: 0.6;
+            will-change: transform;
+            animation: move 20s infinite alternate;
+        }
+        @keyframes move {
+            0% { transform: translate(-20%, -10%) scale(1); }
+            100% { transform: translate(20%, 10%) scale(1.2); }
+        }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <div class="container mx-auto px-6 py-12 text-center">
-        <h1 class="text-4xl font-bold text-indigo-600 mb-4">About My Website</h1>
-        <p class="text-lg mb-8">This is the subpage you just linked to!</p>
-        <a href="index.html" class="text-indigo-600 hover:underline">Go Back to Home</a>
+<body class="min-h-screen flex items-center justify-center">
+
+    <!-- Decorative Gradient Blobs -->
+    <div class="gradient-blob" style="background-color: #818cf8; top: -10%; left: -10%;"></div>
+    <div class="gradient-blob" style="background-color: #f472b6; bottom: -10%; right: -10%; animation-delay: -5s;"></div>
+    <div class="gradient-blob" style="background-color: #60a5fa; top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: -10s;"></div>
+
+    <!-- Main Content Island (Using max-w-5xl for good text readability) -->
+    <div class="frosted-glass-island w-full max-w-5xl mx-auto rounded-3xl overflow-hidden">
+        
+        <!-- Header / Navigation -->
+        <header class="border-b border-white/20">
+            <nav class="container mx-auto px-6 md:px-10 py-4 flex justify-between items-center">
+                <!-- Name/Logo -->
+                <a href="index.html" class="text-2xl font-bold text-gray-800">
+                    Ben's Portfolio
+                </a>
+                <!-- Navigation Links (Note "About" is now the active link) -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Home</a>
+                    <a href="about.html" class="text-indigo-600 font-bold transition-colors font-medium">About</a>
+                    <a href="projects.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Projects</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="p-6 md:p-10">
+            <!-- About Section -->
+            <section id="about">
+                <div class="text-center mb-10 md:mb-16">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800">About Me</h1>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-start gap-8 md:gap-12">
+                    
+                    <!-- Left Column: Image -->
+                    <div class="w-full md:w-1/3">
+                        <!-- Placeholder for your photo. Replace the 'src' with a link to your headshot when you have one. -->
+                        <img src="https://placehold.co/600x800/e2e8f0/4f46e5?text=Ben's\nPhoto" 
+                             alt="A photo of Ben" 
+                             class="rounded-2xl shadow-lg w-full">
+                    </div>
+                    
+                    <!-- Right Column: Bio & Skills -->
+                    <div class="w-full md:w-2/3">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Hello, I'm Ben.</h2>
+                        
+                        <p class="text-lg text-gray-700 mb-4">
+                            Welcome to my corner of the internet. I am a passionate creator, storyteller, and [Your Role, e.g., Video Editor, Designer] based in [Your Location, e.g., New York City]. My goal is to use visual media to create compelling narratives and solve complex problems.
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 mb-4">
+                            Here, you'll find a collection of my work, from personal projects to professional commissions. I'm driven by [Your Passion, e.g., a love for cinematography, a curiosity for new technology] and I'm always looking for new challenges and opportunities to grow.
+                        </p>
+                        
+                        <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">My Skills</h3>
+                        
+                        <ul class="list-none flex flex-wrap gap-3">
+                            <!-- Add/remove your skills here -->
+                            <li class="bg-indigo-100 text-indigo-700 font-medium py-2 px-4 rounded-full">Video Editing</li>
+                            <li class="bg-indigo-100 text-indigo-700 font-medium py-2 px-4 rounded-full">Storytelling</li>
+                            <li class="bg-indigo-100 text-indigo-700 font-medium py-2 px-4 rounded-full">Motion Graphics</li>
+                            <li class="bg-indigo-100 text-indigo-700 font-medium py-2 px-4 rounded-full">Color Grading</li>
+                            <li class="bg-indigo-100 text-indigo-700 font-medium py-2 px-4 rounded-full">Adobe Premiere Pro</li>
+                            <li class="bg-indigo-100 text-indigo-700 font-medium py-2 px-4 rounded-full">After Effects</li>
+                        </ul>
+
+                        <a href="projects.html" class="inline-block bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-7T00 transition-all text-lg mt-10">
+                            See My Work
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="bg-black/5 text-gray-700 py-6 px-6 md:px-10 text-center">
+             <p>&copy; 2025 Ben &bull; <a href="mailto:hello@example.com" class="hover:text-indigo-600">hello@example.com</a></p>
+        </footer>
     </div>
+
 </body>
 </html>
