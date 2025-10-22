@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben's Projects</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles (Same as index.html) -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            overflow-x: hidden;
+            padding: 2rem 1rem;
+        }
+        .frosted-glass-island {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        }
+        .gradient-blob {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(150px);
+            z-index: -1;
+            opacity: 0.6;
+            will-change: transform;
+            animation: move 20s infinite alternate;
+        }
+        @keyframes move {
+            0% { transform: translate(-20%, -10%) scale(1); }
+            100% { transform: translate(20%, 10%) scale(1.2); }
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center">
+
+    <!-- Decorative Gradient Blobs -->
+    <div class="gradient-blob" style="background-color: #818cf8; top: -10%; left: -10%;"></div>
+    <div class="gradient-blob" style="background-color: #f472b6; bottom: -10%; right: -10%; animation-delay: -5s;"></div>
+    <div class="gradient-blob" style="background-color: #60a5fa; top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: -10s;"></div>
+
+    <!-- Main Content Island -->
+    <div class="frosted-glass-island w-full max-w-7xl mx-auto rounded-3xl overflow-hidden"> <!-- max-w-7xl to fit 3 columns -->
+        
+        <!-- Header / Navigation -->
+        <header class="border-b border-white/20">
+            <nav class="container mx-auto px-6 md:px-10 py-4 flex justify-between items-center">
+                <!-- Name/Logo -->
+                <a href="index.html" class="text-2xl font-bold text-gray-800">
+                    Ben's Portfolio
+                </a>
+                <!-- Navigation Links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">About</a>
+                    <a href="projects.html" class="text-indigo-600 font-bold transition-colors font-medium">Projects</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="p-6 md:p-10">
+            <!-- Projects Section -->
+            <section id="projects">
+                <div class="text-center mb-10 md:mb-16">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800">My Projects</h1>
+                    <p class="text-lg text-gray-700 mt-2">A collection of my recent work.</p>
+                </div>
+                
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    
+                    <!-- Project 1 -->
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
+                        <div class="video-container rounded-lg overflow-hidden mb-3">
+                            <iframe src="https://drive.google.com/file/d/1xNt3TUiq4osnEoXrXsnpoAV5z-Gdz9-7/preview" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Project One</h3>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
+                        <div class="video-container rounded-lg overflow-hidden mb-3">
+                            <iframe src="https://drive.google.com/file/d/16Gw0XuN-o89Le73lN7lKhlN_FJlHbGJZ/preview" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Project Two</h3>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
+                        <div class="video-container rounded-lg overflow-hidden mb-3">
+                            <iframe src="https://drive.google.com/file/d/1YN_n2Lu4OoVx6JUIfbkpOJXIHhUojwth/preview" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Project Three</h3>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
+                        <div class="video-container rounded-lg overflow-hidden mb-3">
+                            <iframe src="https://drive.google.com/file/d/1JhTeYKGEiSv9Lme0Ma0I1WViEad5N1K-/preview" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Project Four</h3>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
+                        <div class="video-container rounded-lg overflow-hidden mb-3">
+                            <iframe src="https://drive.google.com/file/d/1P7mZIXIV8aaSbjTNg96FS1awGJSHHAKt/preview" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Project Five</h3>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
+                        <div class="video-container rounded-lg overflow-hidden mb-3">
+                            <iframe src="https://drive.google.com/file/d/1S7Wzcnh8zqxjI8rsczZWFshyD_qVYoUa/preview" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Project Six</h3>
+                    </div>
+
+                    <!-- Project 7 -->
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
+                        <div class="video-container rounded-lg overflow-hidden mb-3">
+                            <iframe src="https://drive.google.com/file/d/1KBg3i5M5mSlWS7sfTzsgdKmAp5LRxNEu/preview" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Project Seven</h3>
+                    </div>
+
+                    <!-- Project 8 -->
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
+                        <div class="video-container rounded-lg overflow-hidden mb-3">
+                            <iframe src="https://drive.google.com/file/d/1Yp5tOX2juWMJh_13FNIcV2UkibLBe4Q6/preview" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Project Eight</h3>
+                    </div>
+
+                    <!-- Project 9 -->
+                    <div class="bg-white/40 p-4 rounded-2xl shadow-lg border border-white/30">
+                        <div class="video-container rounded-lg overflow-hidden mb-3">
+                            <iframe src="https://drive.google.com/file/d/1INKgM0YYsh3pkVscIq7k1PeU8FQuN5ve/preview" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Project Nine</h3>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="bg-black/5 text-gray-700 py-6 px-6 md:px-10 text-center">
+             <p>&copy; 2025 Ben &bull; <a href="mailto:hello@example.com" class="hover:text-indigo-600">hello@example.com</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
